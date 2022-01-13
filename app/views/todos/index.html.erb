@@ -1,0 +1,11 @@
+<h1 class="text-center">Task Listing</h1>
+<%= link_to "New Task", new_todo_path , class:"btn btn-info my-2"%>
+<hr>
+<ul>
+  <% @todos.each do |todo| %>
+    <li>
+      <%= link_to todo.taskname, todo %>
+      
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,24 @@
+
+<h1 class= "text-center text-primary"> View Information</h1> <hr>
+
+
+<p><strong> Taskname:- </strong>
+<%= @todo.taskname %></p>
+
+<p>
+<strong> Tasktype:- </strong>
+<%= @todo.tasktype %></p>
+<p>
+<strong> Due date time:- </strong>
+<%= @todo.duedatetime %></p>
+<p>
+<strong> Repeat:- </strong>
+<%= @todo.repeat %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_todo_path(@todo), class:"btn btn-success" %></li></br>
+  <li><%= link_to "Destroy", todo_path(@todo), method: :delete, data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } , class: "btn btn-danger" %></li>
+</ul>

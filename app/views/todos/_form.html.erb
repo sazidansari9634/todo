@@ -1,0 +1,54 @@
+<html>
+<head>
+  <style>
+ 
+  input,
+.btn {
+ width: 100%;
+ padding: 5px;
+ border: primary;
+ border-radius: 4px;
+ margin: 5px 0;
+ opacity: 0.85;
+ display: inline-block;
+ font-size: 17px;
+ line-height: 20px;
+ text-decoration: none; /* remove underline from anchors */
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="container h-100 ">
+<%= form_with model: @todo do |form| %>
+    <div class="container">
+      <%= form.label :taskname %><br>
+      <%= form.text_field :taskname  %>
+    </div>
+  
+    <div class="container">
+      <%= form.label :tasktype %><br>
+      <%= form.select :tasktype, ['Please Select Task', 'Personal','Work','Other'] ,{}, {class: "form-control"} %>
+
+    </div>
+  
+  
+    <div class="container">
+      <%= form.label :duedatetime %><br>
+      <%= form.datetime_field :duedatetime %>
+    </div>
+  
+  
+    <div class="container">
+      <%= form.label :repeat %><br>
+      
+      <%= form.select :repeat, ['Oneday','Weekly','Month','Year'] ,{}, {class: "form-control"} %> 
+    </div>
+   
+    <br/>
+    <div class="d-grid gap-2 col-2 mx-auto">
+    <%= form.submit %>
+    </div>
+  <% end %>

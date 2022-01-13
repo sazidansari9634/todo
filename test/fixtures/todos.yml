@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_id: 1
+  taskname: MyString
+  tasktype: MyString
+  duedatetime: 2022-01-13
+  repeat: MyString
+
+two:
+  task_id: 1
+  taskname: MyString
+  tasktype: MyString
+  duedatetime: 2022-01-13
+  repeat: MyString
